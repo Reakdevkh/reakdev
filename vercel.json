@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/CountdownKNY",
+      "destination": "/CountdownKNY/index.html"
+    }
+  ]
+}

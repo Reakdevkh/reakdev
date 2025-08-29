@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khmer New Year Countdown — Apr 14</title>
+  <meta name="description" content="Countdown to Khmer New Year on April 14 (next year) in Cambodia time." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+      <h1>វិស្សមកាលចូលឆ្នាំខ្មែរ — Khmer New Year</h1>
+      <div class="sub">Counting down to <strong>April 14</strong> (next year) — Cambodia time (UTC+7)</div>
+    </header>
+
+    <main class="card">
+      <div class="timer" role="timer" aria-live="polite">
+        <div class="unit" aria-label="Days">
+        
+          <div class="value" id="d">0</div>
+          <div class="label">ថ្ងៃ | Days</div>
+        </div>
+        <div class="unit" aria-label="Hours">
+          
+          <div class="value" id="h">0</div>
+          <div class="label">ម៉ោង | Hours</div>
+        </div>
+        <div class="unit" aria-label="Minutes">
+       
+          <div class="value" id="m">0</div>
+          <div class="label">នាទី | Minutes</div>
+        </div>
+        <div class="unit" aria-label="Seconds">
+       
+          <div class="value" id="s">0</div>
+          <div class="label">វិនាទី | Seconds</div>
+        </div>
+      </div>
+      <p class="note" id="note"></p>
+    </main>
+
+    <div class="footer">
+      <span>📅 Target: April 14 (next year)</span>
+      <span>•</span>
+      <button id="toggleYear">Switch to this year</button>
+    </div>
+  </div>
+
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <script src="script.js"></script>
+ 
+</body>
+</html>
