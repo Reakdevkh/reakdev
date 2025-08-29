@@ -470,7 +470,7 @@
         }
 
         .submit-btn {
-            background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));
+            background: blue ;
             color: var(--text-primary);
             border: none;
             padding: 1rem 2rem;
