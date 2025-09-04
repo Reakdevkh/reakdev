@@ -252,6 +252,53 @@
         <p>© 2025 ReakDev. All Rights Reserved.</p>
     </footer>
 
+    <!-- EmailJS Script -->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  (function(){
+    emailjs.init("_nytKKtBrNIpqWg_T"); 
+  })();
+
+  const form = document.querySelector("#contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const btn = this.querySelector(".submit-btn");
+    const btnText = btn.querySelector(".btn-text");
+
+    // Sending animation
+    btnText.innerHTML = "Sending...";
+    btn.style.background = "linear-gradient(45deg, #ffa500, #ff6b6b)";
+    btn.style.transform = "scale(0.95)";
+
+    // Send via EmailJS
+    emailjs.sendForm("service_m8bsaf5", "template_ispkegi", this)
+      .then(() => {
+        btnText.innerHTML = "✓ Message Sent!";
+        btn.style.background = "linear-gradient(45deg, #4CAF50, #45a049)";
+        btn.style.transform = "scale(1)";
+        this.reset();
+
+        setTimeout(() => {
+          btnText.innerHTML = "Send Message";
+          btn.style.background = "linear-gradient(45deg, #00d4ff, #ff6b6b)";
+        }, 3000);
+      })
+      .catch((error) => {
+        btnText.innerHTML = "❌ Failed";
+        btn.style.background = "red";
+        console.error("EmailJS Error:", error);
+
+        setTimeout(() => {
+          btnText.innerHTML = "Send Message";
+          btn.style.background = "linear-gradient(45deg, #00d4ff, #ff6b6b)";
+        }, 3000);
+      });
+  });
+</script>
+
     <script src="script.js"></script>
 </body>
 </html>
